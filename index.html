@@ -74,7 +74,7 @@
             <button class="button operator" onclick="convertToFahrenheit()">T</button>
             <button class="button operator" onclick="convertToKilograms()">P</button> 
             <button class="button operator" onclick="convertToPSI()" >PR</button>
-            <button class="button operator" >M</button>
+            <button class="button operator" onclick="convertToUSD()">M</button>
         </div>
     </div>
 
@@ -139,6 +139,15 @@
             let bar = parseFloat(currentInput);
             let psi = bar * 14.5038;
             currentInput = psi.toString();
+            updateDisplay();
+        }
+
+        function convertToUSD() {
+            if (currentInput === '') return;
+            let cop = parseFloat(currentInput);
+            let exchangeRate = 0.00024;
+            let usd = cop * exchangeRate;
+            currentInput = usd.toFixed(2).toString(); // Limitar a 2 decimales
             updateDisplay();
         }
 
