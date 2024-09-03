@@ -5,22 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <style>
+        body {
+            background-color: #acb7e4; 
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h2, h3 {
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        h3 {
+            margin-bottom: 20px;
+        }
         .calculator {
-            width: 200px;
-            margin: 0 auto;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
+            width: 220px;
+            padding: 20px;
+            border: 1px solid hsl(0, 2%, 11%);
+            border-radius: 10px;
+            background-color: #ffffff;
         }
         .display {
             width: 100%;
-            height: 40px;
-            margin-bottom: 10px;
+            height: 50px;
+            margin-bottom: 15px;
             text-align: right;
-            padding: 5px;
-            border: 1px solid #ccc;
+            padding: 10px;
+            border: 1px solid #8c8282;
             border-radius: 5px;
             font-size: 1.5em;
+            background-color: #f9f9f9;
         }
         .buttons {
             display: grid;
@@ -48,8 +69,10 @@
     </style>
 </head>
 <body>
-    <div><h2>Proyecto Calculadora</h2></div>
-    <div><h3>Autor: Tania Trejo </h3></div>
+    <div>
+        <h2>Proyecto Calculadora</h2>
+        <h3>Autor: Tania Trejo</h3>
+    </div>
     <div class="calculator">
         <div id="display" class="display"></div>
         <div class="buttons">
@@ -75,7 +98,7 @@
 
             <button class="button operator" onclick="convertToFahrenheit()">T</button>
             <button class="button operator" onclick="convertToKilograms()">P</button> 
-            <button class="button operator" onclick="convertToPSI()" >PR</button>
+            <button class="button operator" onclick="convertToPSI()">PR</button>
             <button class="button operator" onclick="convertToUSD()">M</button>
         </div>
     </div>
@@ -165,6 +188,4 @@
         }
     </script>
 </body>
-</html>
-
 </html>
